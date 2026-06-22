@@ -91,17 +91,18 @@
   .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold)}
 
   .hero-head{
-    font-weight:900;line-height:1.02;letter-spacing:-.01em;
+    font-weight:900;line-height:1.08;letter-spacing:-.01em;
     font-size:clamp(42px,8.5vw,98px);
-    direction:ltr;text-align:right;
+    text-align:center;
   }
-  .hero-head .from{display:block;color:var(--muted-2);font-weight:800;font-size:.42em;letter-spacing:.02em;margin-bottom:.25em}
-  .hero-head .user{color:var(--muted);position:relative}
-  .hero-head .user::after{content:"";position:absolute;right:0;left:0;top:54%;height:3px;background:var(--muted-2);transform:scaleX(0);transform-origin:right;transition:transform .7s .5s cubic-bezier(.2,.7,.2,1)}
+  .hero-head .from{display:block;color:var(--muted-2);font-weight:800;font-size:.38em;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.1em}
+  .hero-head .arrow-row{display:flex;align-items:center;justify-content:center;gap:.15em}
+  .hero-head .user{color:var(--muted);position:relative;direction:ltr;display:inline-block}
+  .hero-head .user::after{content:"";position:absolute;left:0;right:0;top:54%;height:3px;background:var(--muted-2);transform:scaleX(0);transform-origin:left;transition:transform .7s .5s cubic-bezier(.2,.7,.2,1)}
   .reveal.in .hero-head .user::after{transform:scaleX(1)}
-  .hero-head .arrow{color:var(--gold-deep);font-weight:400;padding:0 .18em}
+  .hero-head .arrow{color:var(--gold-deep);font-weight:300;font-size:.7em;line-height:1;direction:ltr}
   .hero-head .leader{
-    color:var(--gold);
+    display:block;color:var(--gold);direction:ltr;
     text-shadow:0 0 40px rgba(230,187,110,.35);
   }
 
@@ -387,8 +388,10 @@
 
     <h1 class="hero-head">
       <span class="from">From</span>
-      <span class="user">AI&nbsp;User</span>
-      <span class="arrow">→</span>
+      <div class="arrow-row">
+        <span class="user">AI&nbsp;Developer</span>
+        <span class="arrow">→</span>
+      </div>
       <span class="leader">AI&nbsp;Leader</span>
     </h1>
 
@@ -402,8 +405,10 @@
     </div>
 
     <div class="meta-strip">
+      <span>👩‍💼 <b>לנשים בלבד</b></span><span class="sep">/</span>
       <span>📚 <b>4 מפגשים</b></span><span class="sep">/</span>
       <span>⏰ <b>1.5 שעות</b> כל מפגש</span><span class="sep">/</span>
+      <span>💻 <b>זום</b> · שעות הערב</span><span class="sep">/</span>
       <span>🔒 <b>מספר מקומות מוגבל</b></span>
     </div>
   </div>
@@ -519,7 +524,7 @@
           <span class="cur">₪</span><span class="amt">400</span>
           <span class="per">למסלול המלא · 4 מפגשים · המחיר יעלה במחזור הבא</span>
         </div>
-        <div class="pc-dates"><span class="mono">מועדים:</span> 02.07 · 07.07 · 14.07 · 21.07</div>
+        <div class="pc-dates"><span class="mono">מועדים:</span> 02.07 · 07.07 · 14.07 · 21.07 &nbsp;·&nbsp; <span class="mono">זום · שעות הערב</span></div>
       </div>
 
       <div class="reg-divider"><span>מלאי את הפרטים</span></div>
@@ -698,9 +703,9 @@ async function submitReg() {
   <div class="wrap">
     <div class="reveal">
       <div class="sec-label">המסלול</div>
-      <h2 class="journey-head">4 מפגשים. מ‑<span class="latin">User</span> ל‑<span class="latin">Leader</span>.</h2>
+      <h2 class="journey-head">4 מפגשים. מ‑<span class="latin">Developer</span> ל‑<span class="latin">Leader</span>.</h2>
       <p class="journey-intro">כל מפגש בונה נדבך נוסף, כשבסופו של דבר תצאי מומחית לעבודה אייג׳נטית</p>
-      <div class="sched"><span class="mono">המועדים:</span> 02.07 · 07.07 · 14.07 · 21.07 <span class="mono" style="color:var(--muted-2)">| 1.5 שעות כל מפגש</span></div>
+      <div class="sched"><span class="mono">המועדים:</span> 02.07 · 07.07 · 14.07 · 21.07 <span class="mono" style="color:var(--muted-2)">| 1.5 שעות כל מפגש | זום · שעות הערב</span></div>
     </div>
 
     <div class="path">
@@ -802,8 +807,10 @@ async function submitReg() {
 <footer>
   <div class="wrap">
     <div class="fmeta">
+      <span>👩‍💼 <b>לנשים בלבד</b></span><span class="sep">/</span>
       <span>📚 <b>4</b> מפגשים</span><span class="sep">/</span>
       <span>⏰ <b>1.5</b> שעות כל מפגש</span><span class="sep">/</span>
+      <span>💻 <b>זום</b> · שעות הערב</span><span class="sep">/</span>
       <span>🔒 מספר מקומות מוגבל</span>
     </div>
     <div class="brand">The Way to AI Leader</div>
